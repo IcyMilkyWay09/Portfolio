@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/Flower Favicon.PNG">
+    <title>Web Dev | Jazmine Cratty</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <a href="home.html" class="logo" style="font-family: 'Sanctum Grotesk', sans-serif;">Jazmine Cratty</a> 
+        <div class="header-right">
+            <a href="home.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="getintouch.html">Get in Touch</a>
+        </div>
+    </div>
+
+    <h1 style="color: #30030B">Web Development</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="image-grid">
+        <img class="modal-img"
+            src="images/CandiExpress Site.png"
+            alt="CandiExpress Site Screenshot"
+            data-title="CandiExpress"
+            data-description="A website for my Etsy shop, CandiExpress. Coded using HTML."
+            >
+            
+
+        <img class="modal-img"
+            src="images/Favorite Shows Site.png"
+            alt="Favorite Shows Website Screenshot"
+            data-title="Favorite Shows Website"
+            data-description="An HTML/CSS/JavaScript site showcasing my favorite shows"
+            >
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="caption" id="modal-caption"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a href="https://icymilkyway09.github.io/IcyMilkyWay09.github.io-CandiExpress/">
+        <button class="portfolioButton">CandiExpress Website</button>
+    </a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a href="https://icymilkyway09.github.io/IcyMilkyWay09.github.io-FavoriteShows/">
+        <button class="portfolioButton">Favorite Shows Website</button>
+    </a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a href="portfolio.html">
+        <button class="portfolioButton">Back to Portfolio</button>
+    </a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <br>
+        <br>
+        <p style="background-color: #30030B">Jazmine Cratty<br>
+        
+        <br>
+        <br>
+
+        <a href="mailto:jcratty09@gmail.com">
+            <button class="footerButton">jcratty09@gmail.com</button>
+        </a>
+        <br>
+        <br>
+    </footer>
+
+</body>
+    <script>
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-image");
+            const caption = document.getElementById("modal-caption");
+            const closeBtn = document.querySelector(".close");
+
+            document.querySelectorAll(".modal-img").forEach(img => 
+            {
+            img.addEventListener("click", () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+
+                const title = img.dataset.title || img.alt;
+                const description = img.dataset.description || "";
+
+                caption.innerHTML = `
+                <h2>${title}</h2>
+                <p>${description}</p>
+                `;
+                document.body.style.overflow = "hidden";
+            });
+        });
+
+        closeBtn.onclick = () => 
+        {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+        };
+
+        modal.onclick = (e) => 
+        {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    };
+    </script>
+</html>

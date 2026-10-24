@@ -1,0 +1,436 @@
+*
+{
+    background-color: #F1D4DF;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1
+{
+    color: #F1D4DF;
+    font-family: 'Sanctum Grotesk', sans-serif;
+    text-align: center;
+}
+
+h2
+{
+    color: #F1D4DF;
+    text-align: center;
+    font-family: 'Sanctum Grotesk', sans-serif;
+}
+
+p
+{
+  color: #F1D4DF;
+  text-align: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.header 
+{
+  overflow: hidden;
+  background-color: #F1D4DF;
+  padding: 20px 10px;
+}
+
+.header a 
+{
+  float: left;
+  color: #30030B;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  text-decoration: none;
+}
+
+.header a.logo 
+{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Sanctum Grotesk', sans-serif;
+}
+
+.header a:hover 
+{
+  background-color: #F1D4DF;
+  color: #A65A6F;
+}
+
+.header a.active 
+{
+  background-color: #F1D4DF;
+  color: #A65A6F;
+}
+
+.header-right 
+{
+  float: right;
+}
+
+.homeImage
+{
+  width: 50%;
+  background-color: #A65A6F;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1
+{
+  float: right;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* basically padding */
+  background-color: #A65A6F;
+}
+
+.column2 
+{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* basically padding */
+  background-color: #A65A6F;
+}
+
+.column3 
+{
+  float: left;
+  width: 33.33%;
+  padding: 25px;
+  height: 330px; /* Should be removed. Only for demonstration */
+  background-color: #F1D4DF;
+}
+
+
+/* Clear floats after the columns */
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button 
+{
+  background-color: #741E31;
+  border: none;
+  color: #F1D4DF;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  text-decoration: none;
+}
+
+.button:hover
+{
+  background-color: #F1D4DF;
+  color: #741E31;
+  text-decoration: none;
+}
+
+.logo-circle
+{
+  border-radius: 50%;
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+
+.portfolioButton 
+{
+    padding: 15px 32px;
+    display: inline-block;
+    margin: 0;
+    transition-duration: 0.2s;
+    cursor: pointer; 
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60%;
+    
+    /* Text */
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #F1D4DF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    
+    /* Decoration */
+    border: 0px solid;
+    background-color: #A65A6F;
+}
+
+.portfolioButton:hover
+{
+  background-color: #F1D4DF;
+  color: #A65A6F;
+  border: 0px solid;
+}
+
+footer
+{
+  background-color: #30030B;
+  text-align: center;
+  padding: 3px;
+  color: #F1D4DF;
+}
+
+.footerButton 
+{
+    padding: 15px 32px;
+    display: inline-block;
+    margin: 0;
+    transition-duration: 0.2s;
+    cursor: pointer; 
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60%;
+    
+    /* Text */
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #F6BAD6;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    
+    /* Decoration */
+    border: 0px solid;
+    background-color: #30030B;
+}
+
+.footerButton:hover
+{
+  background-color: #F1D4DF;
+  color: #30030B;
+  border: 0px solid;
+}
+
+/* FONTS */
+/* Sanctum Grotesk */
+@font-face
+{
+  font-family: 'Sanctum Grotesk';
+  src: url('fonts/SanctumGrotesk-Regular.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+/* Bricolage Grotesque */
+@font-face
+{
+  font-family: 'Bricolage Grotesque';
+  src: url('fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* IMAGES, GRIDS AND MODALS */
+.image-grid
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.image-grid img
+{
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.image-grid img:hover
+{
+  opacity: 0.7;
+}
+
+.modal
+{
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #A65A6F;
+
+  /* NEW: allow modal to scroll */
+  overflow-y: auto;
+
+  /* Remove padding-top so image starts at top */
+  padding: 40px 0;
+}
+
+.modal-content
+{
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  animation: zoom 0.6s;
+}
+
+.caption
+{
+  text-align: center;
+  color: #F1D4DF;
+  background-color: #A65A6F;
+  margin-top: 15px;
+  animation: zoom 0.6s;
+}
+
+@keyframes zoom 
+{
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+.close 
+{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: #F1D4DF;
+  background-color: #A65A6F;
+  cursor: pointer;
+}
+
+.caption h2 
+{
+  color: #F1D4DF;
+  background-color: #A65A6F;
+  padding: 10px;
+  margin: 10px 0 5px;
+  font-size: 24px;
+}
+
+.caption p 
+{
+  color: #F1D4DF;
+  background-color: #A65A6F;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* CONTACT FORM */
+input[type=text], select, textarea 
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #F1D4DF;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #A65A6F;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* button */
+input[type=submit] 
+{
+  background-color: #F1D4DF;
+  color: #30030B;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+input[type=submit]:hover 
+{
+  background-color: #F6BAD6;
+}
+
+.container 
+{
+  border-radius: 5px;
+  background-color: #A65A6F;
+  padding: 20px;
+}
+
+label
+{
+  background-color: #A65A6F;
+  color: #F1D4DF;
+  font-family: 'Sanctum Grotesk', sans-serif;
+}
+
+form
+{
+  background-color: #A65A6F;
+  padding: 50px;
+}
+
+::placeholder
+{
+  color: #F6BAD6;
+}
+
+/* responsive stuff */
+@media screen and (max-width: 500px) 
+{
+  .header a 
+  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right 
+  {
+    float: none;
+  }
+}
+
+@media (max-width: 768px) 
+{
+  .image-column 
+  {
+    flex: 1 1 100%; /* Stacks items to take full width */
+  }
+}
+
+@media only screen and (max-width: 700px)
+{
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+/*
+Lightest
+#F1D4DF
+#F6BAD6
+#A65A6F
+#741E31
+#30030B
+Darkest
+
+font-family: 'Sanctum Grotesk', sans-serif;
+font-family: 'Bricolage Grotesque', sans-serif;
+*/
