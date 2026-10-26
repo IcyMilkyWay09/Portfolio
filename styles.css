@@ -3,6 +3,7 @@
     background-color: #F1D4DF;
     box-sizing: border-box;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 h1
@@ -74,8 +75,165 @@ p
 .homeImage
 {
   width: 50%;
+  max-width: 70%;
+  min-width: 30%;
+  height: auto;
+  background-color: #A65A6F;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* HOMESCREEN LAYOUT */
+/* Parent container */
+#landing-grid-container 
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding: 0;
+}
+
+/* Top row: 2 columns */
+#landing-header 
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #A65A6F;
+}
+
+#landing-welcome
+{
   background-color: #A65A6F;
 }
+
+#landing-welcome p
+{
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Logo */
+#landing-logo img 
+{
+    max-width: 100%;
+    height: auto;
+    background-color: #A65A6F;
+    padding: 10px;
+}
+
+#landing-logo 
+{
+  background-color: #A65A6F;
+}
+
+/* Welcome text */
+#landing-welcome h1 
+{
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Bottom row container */
+#landing-links-row 
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Individual columns */
+.landing-link-column 
+{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Circular logos */
+.landing-logo-circle 
+{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Titles */
+.landing-link-title 
+{
+    color: #A65A6F;
+    margin: 0.5rem 0;
+}
+
+/* Descriptions */
+.landing-link-description 
+{
+    color: #A65A6F;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.landing-link-button 
+{
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    background-color: #741E31;
+    border: none;
+    color: #F1D4DF;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    text-decoration: none;
+}
+
+/* Responsive collapse */
+@media (max-width: 800px) 
+{
+    #landing-links-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Link items */
+.landing-link-item 
+{
+    display: block;
+    padding: 1.5rem;
+    background: #f0f0f0;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.landing-link-item:hover 
+{
+    background: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) 
+{
+    #landing-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #landing-links {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Create two equal columns that floats next to each other */
 .column1
@@ -184,7 +342,8 @@ footer
 {
   background-color: #30030B;
   text-align: center;
-  padding: 3px;
+  padding: 0;
+  width: 100%;
   color: #F1D4DF;
 }
 
