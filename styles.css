@@ -421,6 +421,12 @@ form
   }
 }
 
+/* Fallback fonts for Apple / Android */
+body 
+{
+  font-family: 'YourCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 
 /*
 Lightest
