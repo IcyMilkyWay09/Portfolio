@@ -10,7 +10,12 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <a href="index.html" class="logo" style="font-family: 'Sanctum Grotesk', sans-serif;">Jazmine Cratty</a> 
+        <!-- <a href="index.html" class="logo" style="font-family: 'Sanctum Grotesk', sans-serif;">Jazmine Cratty</a> -->
+
+        <a href="index.html" class="logo">
+            <img src="Logo with Title.png" alt="Logo and Title">
+        </a>
+
         <div class="header-right">
             <a class="active" href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
@@ -18,71 +23,50 @@
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!--
-
-<!-- Image + Title 
-    <div class="row">
-        <div class="column2">
-            <br>
-            <br>
-            <img class="homeImage" src="Beetle Pink Image.PNG">
-        </div>
-        <div class="column1">
-            <br>
-            <br>
-            <h2 style="background-color: #A65A6F">Welcome!</h2>
-            <p style="background-color: #A65A6F">This is my professional portfolio website. If you're looking for something else, just scroll down!</p>
-            <a href="portfolio.html">
-                <button class="button">Go Explore ></button>
+    <!-- CAROUSEL -->
+    <div class="jmzCarousel-container">
+        <div class="jmzCarousel-slide active">
+            <img src="Lady's Knight Poster.png" alt="Lady's Knight Poster">
+            <a href="gamedesign.html" class="jmzCarousel-button">
+                Lady's Knight
             </a>
+        </div>
+
+        <div class="jmzCarousel-slide">
+            <img src="Bats and Berries.png" alt="Bats and Berries Logo">
+            <a href="https://batsandberriesco.wixsite.com/home" target="_blank" class="jmzCarousel-button">
+                Bats and Berries
+            </a>
+        </div>
+
+        <div class="jmzCarousel-slide">
+            <img src="Medium Man.jpg" alt="Medium Man">
+            <<a href="digitalart.html" class="jmzCarousel-button">
+                Medium Man
+            </a>
+        </div>
+
+        <!-- Arrows -->
+        <button class="jmzCarousel-arrow jmzCarousel-prev">&#10094;</button>
+        <button class="jmzCarousel-arrow jmzCarousel-next">&#10095;</button>
+
+        <!-- Dots -->
+        <div class="jmzCarousel-dots">
+            <button class="jmzCarousel-dot active"></button>
+            <button class="jmzCarousel-dot"></button>
+            <button class="jmzCarousel-dot"></button>
         </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
+    
     <br>
 
-<!-- Three Section Divider
-    <div class="row">
-        <!--Bats and Berries
-        <div class="column3">
-            <img class="logo-circle" src="Bats and Berries.png" alt="Bats and Berries Logo">
-            <h2 style="color: #A65A6F">Bats and Berries</h2>
-            <p style="color: #A65A6F">Want some cool knick knacks?</p>
-            <a href="https://candiexpressshop.wixsite.com/shop" target="_blank">
-                <button class="button">Go Shopping ></button>
-            </a>
-        </div>
-
-        <!--My Portfolio
-        <div class="column3">
-            <img class="logo-circle" src="Me.png" alt="Image of me">
-            <h2 style="color: #A65A6F">My Portfolio</h2>
-            <p style="color: #A65A6F">You're in the right place!</p>
-            <a href="portfolio.html">
-                <button class="button">Continue ></button>
-            </a>
-        </div>
-
-        <!--IcyScript
-        <div class="column3">
-            <img class="logo-circle" src="IcyScript.png" alt="IcyScript Designs Logo">
-            <h2 style="color: #A65A6F">IcyScript Designs</h2>
-            <p style="color: #A65A6F">Looking to have a website made?</p>
-            <a href="https://icywaters093.wixsite.com/my-site" target="_blank">
-                <button class="button">Let's Build ></button>
-            </a>
-        </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
--->
+
+    <!-- LANDING STRIP -->
     <div id="landing-grid-container">
         <div id="landing-header">
             <div id="landing-logo">
@@ -102,13 +86,15 @@
             </div>
         </div>
 
+        
+
         <div id="landing-links-row">
             <!--Bats and Berries-->
             <div class="landing-link-column">
                 <img class="landing-logo-circle" src="Bats and Berries.png" alt="Bats and Berries Logo">
                 <h2 class="landing-link-title">Bats and Berries</h2>
                 <p class="landing-link-description">Want some cool knick knacks?</p>
-                <a href="https://candiexpressshop.wixsite.com/shop" target="_blank">
+                <a href="https://batsandberriesco.wixsite.com/home" target="_blank">
                     <button class="button">Go Shopping ></button>
                 </a>
             </div>
@@ -141,7 +127,65 @@
     <br>
     <br>
 
-    <!-- Footer -->
+    <!-- STICKER BOARD -->
+    <section class="jmzStickerSection">
+        <h2>My Toolbox</h2>
+        <p>Here's a sticker board of the types of software I have experience in!</p>
+
+        <div class="jmzStickerBoard">
+            <div class="jmzSticker adobe">
+                <img src="Adobe.png" alt="Adobe Suite">
+                <span>Adobe Suite</span>
+            </div>
+
+            <div class="jmzSticker google">
+                <img src="Google.png" alt="Alphabet Products">
+                <span>Alphabet Products</span>
+            </div>
+
+            <div class="jmzSticker aseprite">
+                <img src="Aesprite.png" alt="Aesprite">
+                <span>Aesprite</span>
+            </div>
+
+            <div class="jmzSticker unity">
+                <img src="Unity.png" alt="Unity">
+                <span>Unity</span>
+            </div>
+
+            <div class="jmzSticker github">
+                <img src="Git.png" alt="GitHub">
+                <span>GitHub</span>
+            </div>
+
+            <div class="jmzSticker visualstudio">
+                <img src="VS Code.png" alt="Visual Studio Products">
+                <span>Visual Studio</span>
+            </div>
+
+            <div class="jmzSticker figma">
+                <img src="Figma.png" alt="Figma">
+                <span>Figma</span>
+            </div>
+
+            <div class="jmzSticker wix">
+                <img src="Wix.png" alt="Wix">
+                <span>Wix</span>
+            </div>
+
+            <div class="jmzSticker notion">
+                <img src="Notion.png" alt="Notion">
+                <span>Notion</span>
+            </div>
+
+            <div class="jmzSticker canva">
+                <img src="Canva.png" alt="Canva">
+                <span>Canva</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <br>
         <br>
@@ -156,5 +200,92 @@
         <br>
         <br>
     </footer>
+<script>
+    const jmzCarouselSlides =
+    document.querySelectorAll(".jmzCarousel-slide");
+
+    const jmzCarouselDots =
+        document.querySelectorAll(".jmzCarousel-dot");
+
+    const jmzCarouselPrev =
+        document.querySelector(".jmzCarousel-prev");
+
+    const jmzCarouselNext =
+        document.querySelector(".jmzCarousel-next");
+
+    let jmzCarouselCurrent = 0;
+    let jmzCarouselTimer;
+
+    function jmzCarouselShowSlide(index) 
+    {
+        if (index < 0) {
+            index = jmzCarouselSlides.length - 1;
+        }
+
+        if (index >= jmzCarouselSlides.length) {
+            index = 0;
+        }
+
+        jmzCarouselSlides.forEach(slide =>
+            slide.classList.remove("active")
+        );
+
+        jmzCarouselDots.forEach(dot =>
+            dot.classList.remove("active")
+        );
+
+        jmzCarouselSlides[index].classList.add("active");
+        jmzCarouselDots[index].classList.add("active");
+
+        jmzCarouselCurrent = index;
+    }
+
+    function jmzCarouselNextSlide() 
+    {
+        jmzCarouselShowSlide(jmzCarouselCurrent + 1);
+    }
+
+    function jmzCarouselPrevSlide() 
+    {
+        jmzCarouselShowSlide(jmzCarouselCurrent - 1);
+    }
+
+    jmzCarouselNext.addEventListener("click", () => 
+    {
+        jmzCarouselNextSlide();
+        jmzCarouselRestartTimer();
+    });
+
+    jmzCarouselPrev.addEventListener("click", () => 
+    {
+        jmzCarouselPrevSlide();
+        jmzCarouselRestartTimer();
+    });
+
+    jmzCarouselDots.forEach((dot, index) => 
+    {
+        dot.addEventListener("click", () => 
+        {
+            jmzCarouselShowSlide(index);
+            jmzCarouselRestartTimer();
+        });
+    });
+
+    function jmzCarouselStartTimer() 
+    {
+        jmzCarouselTimer = setInterval(() => 
+        {
+            jmzCarouselNextSlide();
+        }, 5000);
+    }
+
+    function jmzCarouselRestartTimer() 
+    {
+        clearInterval(jmzCarouselTimer);
+        jmzCarouselStartTimer();
+    }
+
+    jmzCarouselStartTimer();
+</script>
 </body>
 </html>

@@ -3,7 +3,6 @@
     background-color: #F1D4DF;
     box-sizing: border-box;
     text-decoration: none;
-    overflow-x: hidden;
 }
 
 h1
@@ -29,9 +28,11 @@ p
 
 .header 
 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   overflow: hidden;
   background-color: #F1D4DF;
-  padding: 20px 10px;
 }
 
 .header a 
@@ -42,8 +43,8 @@ p
   padding: 12px;
   text-decoration: none;
   font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
+  /*line-height: 25px;*/
+  /*border-radius: 4px;*/
   font-family: 'Bricolage Grotesque', sans-serif;
   text-decoration: none;
 }
@@ -53,6 +54,13 @@ p
   font-size: 25px;
   font-weight: bold;
   font-family: 'Sanctum Grotesk', sans-serif;
+}
+
+.logo img 
+{
+    height: 100px;
+    width: auto;
+    display: block;
 }
 
 .header a:hover 
@@ -70,6 +78,9 @@ p
 .header-right 
 {
   float: right;
+  display: flex;
+  align-items: center;
+  height: 100px;
 }
 
 .homeImage
@@ -85,6 +96,122 @@ p
 
 /* HOMESCREEN LAYOUT */
 /* Parent container */
+
+/* CAROUSEL */
+.jmzCarousel-container 
+{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.jmzCarousel-slide 
+{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.jmzCarousel-slide.active 
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.jmzCarousel-slide img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.jmzCarousel-button 
+{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: inline-block;
+    padding: 14px 28px;
+
+    background: #F1D4DF;
+    color: #741E31;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Bricolage Grotesque', sans-serif;
+
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.jmzCarousel-button:hover {
+    background: #741E31;
+    color: #F1D4DF;
+}
+
+/* Arrows */
+
+.jmzCarousel-arrow 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    color: #741E31;
+    background: #F6BAD6;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.jmzCarousel-arrow:hover
+{
+    background: #741E31;
+    color: #F6BAD6;
+}
+
+.jmzCarousel-prev {left: 15px;}
+.jmzCarousel-next {right: 15px;}
+
+/* Dots */
+.jmzCarousel-dots 
+{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: #00000000;
+}
+
+.jmzCarousel-dot 
+{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #A65A6F;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.jmzCarousel-dot.active 
+{
+    background: #741E31;
+}
+
+/* OTHER SHIT */
 #landing-grid-container 
 {
     display: grid;
@@ -305,6 +432,16 @@ p
   margin: auto;
 }
 
+/* SMALL BUTTONS FOR PORTFOLIO PAGE */
+.portfolioButtonRow 
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto 30px auto;
+}
+
 .portfolioButton 
 {
     padding: 15px 32px;
@@ -318,6 +455,7 @@ p
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 60%;
+    height: 10%;
     
     /* Text */
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -335,9 +473,186 @@ p
 {
   background-color: #F1D4DF;
   color: #A65A6F;
-  border: 0px solid;
+  border: 2px solid #A65A6F;
 }
 
+.portfolioButtonResume 
+{
+    padding: 15px 32px;
+    display: inline-block;
+    margin: 0;
+    transition-duration: 0.2s;
+    cursor: pointer; 
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 10%;
+    
+    /* Text */
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #F1D4DF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    
+    /* Decoration */
+    border: 0px solid;
+    background-color: #741E31;
+}
+
+.portfolioButtonResume:hover
+{
+  background-color: #F1D4DF;
+  color: #741E31;
+  border: 2px solid #741E31;
+}
+
+/* SOFTWARE SECTION */
+.jmzStickerSection 
+{
+  background-color: #A65A6F;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.jmzStickerSection h2 
+{
+  background-color: #A65A6F;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Sanctum Grotesk', sans-serif;
+    color: #F1D4DF;
+}
+
+.jmzStickerSection p 
+{
+  background-color: #A65A6F;
+  color: #F1D4DF;
+  margin-bottom: 50px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.jmzStickerBoard 
+{
+  background-color: #A65A6F;
+  position: relative;
+  max-width: 1400px;
+  height: 425px;
+  margin: 0 auto;
+}
+
+.jmzSticker 
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    background: #e9bdd5;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+
+    border: 10px solid #e9bdd5;
+}
+
+.jmzSticker img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* sticker text */
+.jmzSticker span 
+{
+    margin-top: 12px;
+    background-color: #e9bdd5;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.jmzSticker:hover {
+    transform: translateY(-15px) scale(1.08);
+    z-index: 100;
+}
+
+/* Stickers */
+.adobe {
+    top: 5%;
+    left: 4%;
+    transform: rotate(-12deg);
+}
+
+.google {
+    top: 2%;
+    left: 22%;
+    transform: rotate(8deg);
+}
+
+.aseprite {
+    top: 6%;
+    left: 40%;
+    transform: rotate(-7deg);
+}
+
+.github {
+    top: 1%;
+    left: 58%;
+    transform: rotate(10deg);
+}
+
+.canva {
+    top: 5%;
+    left: 76%;
+    transform: rotate(-9deg);
+}
+
+.figma {
+    top: 42%;
+    left: 13%;
+    transform: rotate(11deg);
+}
+
+.unity {
+    top: 48%;
+    left: 31%;
+    transform: rotate(-10deg);
+}
+
+.visualstudio {
+    top: 43%;
+    left: 49%;
+    transform: rotate(7deg);
+}
+
+.wix {
+    top: 47%;
+    left: 67%;
+    transform: rotate(-13deg);
+}
+
+.notion {
+    top: 42%;
+    left: 84%;
+    transform: rotate(8deg);
+}
+
+.jmzSticker:hover {
+    z-index: 999;
+}
+
+/* FOOTER */
 footer
 {
   background-color: #30030B;
